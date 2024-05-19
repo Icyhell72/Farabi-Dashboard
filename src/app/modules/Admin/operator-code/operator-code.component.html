@@ -1,0 +1,103 @@
+<div>
+    <div class="bg-img-container flex-grow  bg-img-container 
+    flex flex-col min-h-screen relative" [style.background-image]="'url(' + getImageSource() + ')' ">
+    <div class="bg-green-500 p-2 shadow-md rounded-b-lg fixed w-full top-0 left-0 bg-gradient-to-r from-white to-green-500 rounded">
+      <nav class="flex justify-between items-center h-12 ">
+        <!-- Left section -->
+        <div class="flex items-center ">
+          <!-- El Farabi Logo -->
+          <img src="assets/images/el_farabi_logo.png" alt="El Farabi Logo" class="h-10 w-auto mr-4">
+          <!-- El Farabi Text -->
+          <img src="assets/images/el_farabi_text.png" alt="El Farabi Text" class="h-5 w-auto">
+        </div>
+        <!-- Right section -->
+        <div>
+          <!-- Home Link -->
+          <ul class="flex text-muted-foreground/50">
+            <li class="hover:text-white">
+              <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+    </div>
+     
+      <div class="container mx-auto mt-32">
+        <div>
+          <h3 class="text-center bg-green-500 p-2 shadow-md rounded-b-lg  bg-gradient-to-r from-white to-green-500 rounded">
+            Ajouter un opérateur et lui envoyer une invitation avec le code générer via son/sa email
+          </h3>
+        </div>
+        <div class="w-full max-w-lg mx-auto mt-32">
+          <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 bg-white-transparent">
+          <!-- Nom -->
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nom">Nom</label>
+            <input class="shadow appearance-none border rounded w-full py-2 
+            px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nom" type="text" placeholder="Nom">
+          </div>
+          <!-- Prenom -->
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="prenom">Prénom</label>
+            <input class="shadow appearance-none border rounded w-full py-2 
+            px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="prenom" type="text" placeholder="Prenom">
+          </div>
+          <!-- Numero de telephone -->
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="telephone">Numero de telephone</label>
+            <input class="shadow appearance-none border rounded w-full 
+            py-2 px-3 text-gray-700 leading-tight focus:outline-none 
+            focus:shadow-outline" id="telephone" type="tel" placeholder="Numero de telephone">
+          </div>
+          <!-- E-mail -->
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">E-mail</label>
+            <input class="shadow appearance-none border rounded w-full 
+            py-2 px-3 text-gray-700 leading-tight focus:outline-none 
+            focus:shadow-outline" id="email" type="email" placeholder="E-mail">
+          </div>
+            <!-- Operator Code -->
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="operatorCode">Code Opérateur</label>
+                <div class="flex">
+                  <input class="shadow appearance-none border rounded-l w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="operatorCode" type="text" placeholder="Code Opérateur">
+                  <button type="button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-r focus:outline-none focus:shadow-outline ml-2" (click)="generateOperatorCode()">Générer</button>
+                </div>
+                <p class="text-gray-500 text-xs italic">Un mot de passe provisoir va etre générer avec le compte</p>
+              </div>
+            <!-- Submit Button -->
+            <div class="flex items-center justify-between">
+              <button class="bg-green-500 hover:bg-green-700 text-white font-bold 
+              py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="bg-green-500 p-4 shadow-md rounded-t-md mt-auto">
+        <div class="flex w-full items-center justify-between px-7 text-[13px] font-medium">
+          <div class="text-muted-foreground/50">
+            <span class="mr-2">2024 ©</span>
+            <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="hover:text-white">
+              Fidness
+            </a>
+          </div>
+          <ul class="flex text-muted-foreground/50">
+            <li class="hover:text-white">
+              <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">
+                Contacter
+              </a>
+            </li>
+            <li class="hover:text-white">
+              <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">Sponsor</a>
+            </li>
+            <li class="hover:text-white">
+              <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">Liens</a>
+            </li>
+          </ul>
+        </div>
+      </footer>   
+    </div>
+    

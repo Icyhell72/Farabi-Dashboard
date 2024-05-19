@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Nft } from '../../../models/nft';
 import { NftAuctionsTableItemComponent } from '../nft-auctions-table-item/nft-auctions-table-item.component';
 import { NgFor } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: '[nft-auctions-table]',
@@ -12,7 +13,7 @@ import { NgFor } from '@angular/common';
 export class NftAuctionsTableComponent implements OnInit {
   public activeAuction: Nft[] = [];
 
-  constructor() {
+  constructor( private _route: Router) {
     this.activeAuction = [
       {
         id: 1346771,
@@ -78,4 +79,8 @@ export class NftAuctionsTableComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  navigatetohistorique() {
+    this._route.navigate(['dashboard/client']);
+  }
 }

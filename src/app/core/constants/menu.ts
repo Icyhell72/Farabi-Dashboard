@@ -11,20 +11,41 @@ export class Menu {
           label: 'Dashboard',
           route: '/dashboard',
           children: [
-            { label: 'Parapharmacie', route: '/dashboard/nfts' },
-            { label: 'Clinique', route: '/dashboard/podcast' },
+            { label: 'Page Principale', route: '/dashboard/nfts' },
+            {
+              icon: 'assets/icons/heroicons/outline/lock-closed.svg',
+              label: 'Gerer Equipe',
+              route: '/auth',
+              children: [
+                { label: 'Ajouter Admin', route: '/admin/add' },
+                { label: 'Ajouter Operateur', route: '/operator/add' },
+                { label: 'Consulter Operateurs', route: '/dashboard/operators' },
+              ],
+            },
+            {
+              icon: 'assets/icons/heroicons/outline/lock-closed.svg',
+              label: 'Gerer Clients',
+              route: '/auth',
+              children: [
+                { label: 'Consulter Clients', route: '/dashboard/welcome' },
+                { label: 'Historique Achat', route: '/dashboard/client' },
+                { label: 'Consulter Operateurs', route: '/dashboard/operators' },
+              ],
+            },
           ],
         },
         {
           icon: 'assets/icons/heroicons/outline/lock-closed.svg',
-          label: 'Administration',
+          label: 'Configuration',
           route: '/auth',
           children: [
-            { label: 'Operateur', route: '/auth/sign-up' },
-            { label: 'Caisse', route: '/auth/sign-in' },
-            { label: 'Client', route: '/auth/forgot-password' },
-            { label: 'Produit', route: '/auth/new-password' },
-            { label: 'Produit en solde', route: '/auth/two-steps' },
+            { label: 'Service SMS', route: '/dashboard/sms' },
+            { label: 'Gerer Produits', route: '/dashboard/products' },
+            { label: 'Gerer offres', route: '/dashboard/offres' },
+            { label: 'Gerer Flashsales', route: '/dashboard/flashsales' },
+            { label: 'Gerer pub', route: '/dashboard/pub' },
+            
+            
           ],
         },
       ],

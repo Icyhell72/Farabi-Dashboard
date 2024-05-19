@@ -11,7 +11,7 @@ import { ResponsiveHelperComponent } from './shared/components/responsive-helper
   imports: [NgClass, RouterOutlet, ResponsiveHelperComponent],
 })
 export class AppComponent {
-  title = 'Angular Tailwind';
+  title = 'Para El Farabi';
 
   constructor(public themeService: ThemeService) {}
 }

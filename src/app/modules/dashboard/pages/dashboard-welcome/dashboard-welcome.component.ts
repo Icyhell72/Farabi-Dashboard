@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Nft } from '../../models/nft';
 import { NftAuctionsTableComponent } from '../../components/nft/nft-auctions-table/nft-auctions-table.component';
 import { NftChartCardComponent } from '../../components/nft/nft-chart-card/nft-chart-card.component';
 import { NftSingleCardComponent } from '../../components/nft/nft-single-card/nft-single-card.component';
@@ -7,8 +6,8 @@ import { NftDualCardComponent } from '../../components/nft/nft-dual-card/nft-dua
 import { NftHeaderComponent } from '../../components/nft/nft-header/nft-header.component';
 
 @Component({
-    selector: 'app-nft',
-    templateUrl: './nft.component.html',
+    selector: 'app-dashboard-welcome',
+    templateUrl: './dashboard-welcome.component.html',
     standalone: true,
     imports: [
         NftHeaderComponent,
@@ -18,37 +17,9 @@ import { NftHeaderComponent } from '../../components/nft/nft-header/nft-header.c
         NftAuctionsTableComponent,
     ],
 })
-export class NftComponent implements OnInit {
-  nft: Array<Nft>;
+export class DashboardWelcomeComponent implements OnInit {
 
   constructor() {
-    this.nft = [
-      {
-        id: 1111,
-        title: 'Nouveau Produit',
-        creator: 'Ameni Rhouma',
-        instant_price: 175,
-        price: 200,
-        ending_in: '06J 15h 20m',
-        last_bid: 25,
-        image: './assets/images/img-01.jpg',
-        avatar: './assets/avatars/avt-01.jpg',
-      },
-      {
-        id: 2222,
-        title: 'Ons',
-        price: 550,
-        last_bid: 35,
-        image: './assets/images/img-02.jpg',
-      },
-      {
-        id: 3333,
-        title: 'Nouveau Parrainage',
-        price: 230,
-        last_bid: 15,
-        image: './assets/images/img-03.jpg',
-      },
-    ];
   }
 
   ngOnInit(): void {}

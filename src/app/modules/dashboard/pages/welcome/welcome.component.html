@@ -1,0 +1,68 @@
+<div>
+  <div class="bg-img-container flex-grow bg-img-container flex flex-col min-h-screen relative" [style.background-image]="'url(' + getImageSource() + ')'">
+    <div class="bg-green-500 p-2 shadow-md rounded-b-lg fixed w-full top-0 left-0 bg-gradient-to-r from-white to-green-500 rounded">
+      <nav class="flex justify-between items-center h-12 ">
+        <!-- Left section -->
+        <div class="flex items-center ">
+          <!-- El Farabi Logo -->
+          <img src="assets/images/el_farabi_logo.png" alt="El Farabi Logo" class="h-10 w-auto mr-4">
+          <!-- El Farabi Text -->
+          <img src="assets/images/el_farabi_text.png" alt="El Farabi Text" class="h-5 w-auto">
+        </div>
+        <!-- Middle section (optional) -->
+        <!-- You can add some space here if needed -->
+        <!-- Right section -->
+        <div>
+          <!-- Home Link -->
+          <ul class="flex text-muted-foreground/50">
+            <li class="hover:text-white">
+              <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container mx-auto mt-32">
+      <div>
+        <h3 class="bg-green-400 text-center text-white text-2xl font-bold shadow-lg py-2 px-4 rounded mt-8 animate-slide-fade">
+          Bienvenue chez Para El Farabi 
+        </h3>
+        <br><br><br>
+      </div>
+      
+      
+      <!-- Button for Dashboard Access -->
+      <div class="flex justify-center mt-4">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" (click)="connect()">
+          Appuyez pour accéder au Dashboard
+        </button>
+      </div>
+      <!-- End Button for Dashboard Access -->
+    </div>
+    <footer class="bg-green-500 p-4 shadow-md rounded-t-md mt-auto">
+      <div class="flex w-full items-center justify-between px-7 text-[13px] font-medium">
+        <div class="text-muted-foreground/50">
+          <span class="mr-2">2024 ©</span>
+          <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="hover:text-white">
+            Fidness
+          </a>
+        </div>
+        <ul class="flex text-muted-foreground/50">
+          <li class="hover:text-white">
+            <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">
+              Contacter
+            </a>
+          </li>
+          <li class="hover:text-white">
+            <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">Sponsor</a>
+          </li>
+          <li class="hover:text-white">
+            <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">Liens</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</div>
