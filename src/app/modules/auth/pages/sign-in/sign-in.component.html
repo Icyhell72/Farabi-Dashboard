@@ -9,7 +9,6 @@
           ngModel
           type="email"
           placeholder="farabi.fidness@exemple.com"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           required
           />
         </div>
@@ -25,14 +24,17 @@
           required
           />
         </div>
-        <div class="flex items-center justify-center">
-          <button class="disabled:text-green-200 hover:text-green-500 text-green-200  py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          [disabled]="login.invalid"
-          class="login"
-          (click)="onLogin(login);connect()"
-          >
-            Se connecter
-          </button><br><br>
-          <a class="hover:text-green-500 text-green-200  py-2 px-4 rounded focus:outline-none focus:shadow-outline" (click)="forgetpw()">Mot de passe oublié</a>
+
+        <div class="flex justify-between space-x-2">
+          <div class="w-full">
+            <app-button full impact="bold" tone="primary" shape="rounded" size="medium" (click)="onLogin(login)">Se connecter</app-button>
+          </div>
         </div>
+        <br>
+        <div class="flex justify-between space-x-2">
+          <div class="w-full">
+            <app-button routerLink="/auth/sign-in" full impact="bold" tone="light" shape="rounded" size="medium" (click)="forgetpw()">Mot de passe oublié</app-button>
+          </div>
+        </div>
+
       </form>

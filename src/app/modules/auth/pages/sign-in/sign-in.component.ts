@@ -37,27 +37,33 @@ export class SignInComponent  {
   }
 
   connect() {
+    console.log("Navigating to dashboard...");
     this._route.navigate(['dashboard/nfts']);
   }
 
   onLogin(data: NgForm) {
+    console.log("Login data:", data.value);
     this._service.login(data.value).subscribe({
       next: (result) => {
+        console.log("Login result:", result);
         if (result.state) {
+         
         } else {
           this.msg = 'votre email ou mot de passe est incorrect';
+          this.toastStatus = true;
         }
       },
       error: (err) => {
         console.log(err);
       },
     });
-    setInterval(() => {
+    setTimeout(() => {
       this.toastStatus = false;
     }, 2500);
+    this.connect();
   }
+
   test(login: NgForm) {
     console.log('test');
   }
-
 }

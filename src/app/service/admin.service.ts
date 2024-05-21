@@ -6,7 +6,8 @@ import { Admin } from '../model/admin';
 @Injectable({ providedIn: 'root' })
 export class AdminService {
     private apiUrl = 'http://localhost:5000/api/admin';
-    private _loginUrl = this.apiUrl + '/login';
+    private _loginUrl = this.apiUrl + '/login';  
+    private _resetpwUrl = this.apiUrl + '/sendpassword';
 
     constructor(private http: HttpClient) {}
 
@@ -35,4 +36,10 @@ export class AdminService {
           provider?: string;
         }>(this._loginUrl, loginData);
       }
+
+      resetPassword(email: string): Observable<boolean> {
+        const headers = this.initializeHeaders();
+        const body = { email };
+        return this.http.put<boolean>(this._resetpwUrl, body, { headers });
+    }
 }
