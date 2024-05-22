@@ -5,11 +5,14 @@ import { AddOperatorComponent } from './modules/Admin/add-operator/add-operator.
 import { OperatorCodeComponent } from './modules/Admin/operator-code/operator-code.component';
 import { WelcomeComponent } from './modules/dashboard/pages/welcome/welcome.component';
 import { UpdateAdminComponent } from './modules/Admin/update-admin/update-admin.component';
+import { SignInComponent } from './modules/auth/pages/sign-in/sign-in.component';
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'acc', pathMatch: 'full' },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  { path: 'sign-in', component: SignInComponent },
   { path: 'acc', component: WelcomeComponent },
+  
   {
     path: '',
     loadChildren: () => import('./modules/layout/layout.module').then((m) => m.LayoutModule),

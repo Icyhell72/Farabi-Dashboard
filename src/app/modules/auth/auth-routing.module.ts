@@ -13,7 +13,7 @@ const routes: Routes = [
     path: '',
     component: AuthComponent,
     children: [
-      { path: '', redirectTo: 'sign-up', pathMatch: 'full' },
+      { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
       { path: 'sign-in', component: SignInComponent, data: { returnUrl: window.location.pathname } },
       { path: 'sign-up', component: SignUpComponent },
       { path: 'forgot-password', component: ForgotPasswordComponent },

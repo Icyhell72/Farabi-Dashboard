@@ -1,21 +1,13 @@
-<div>
-  <div class="bg-img-container flex-grow bg-img-container flex flex-col min-h-screen relative" [style.background-image]="'url(' + getImageSource() + ')'">
-    <div class="bg-green-500 p-2 shadow-md rounded-b-lg fixed w-full top-0 left-0 bg-gradient-to-r from-white to-green-500 rounded">
-      <nav class="flex justify-between items-center h-12">
-        <!-- Left section -->
+
+  <div class="flex flex-1">
+
+    <!--  <div class="bg-green-500 p-2 shadow-md rounded-b-lg fixed w-full top-0 left-0 bg-gradient-to-r from-white to-green-500 rounded">
+   <nav class="flex justify-between items-center h-12">  
         <div class="flex items-center">
-          <!-- El Farabi Logo -->
-          <img src="assets/images/el_farabi_logo.png" alt="El Farabi Logo" class="h-10 w-auto mr-4">
-          <!-- El Farabi Text -->
+          <img src="assets/images/el_farabi_logo.png" alt="El Farabi Logo" class="h-10 w-auto mr-4">   
           <img src="assets/images/el_farabi_text.png" alt="El Farabi Text" class="h-5 w-auto">
         </div>
-    
-        <!-- Middle section (optional) -->
-        <!-- You can add some space here if needed -->
-    
-        <!-- Right section -->
         <div>
-          <!-- Home Link -->
           <ul class="flex text-muted-foreground/50">
             <li class="hover:text-white">
               <a href="https://www.linkedin.com/company/fidness-company/" target="_blank" class="menu-link px-2">
@@ -25,95 +17,118 @@
           </ul>
         </div>
       </nav>
+      
     </div>
-   
-    <div class="container mx-auto mt-32">
-      <div>
-        <h3 class="text-center bg-green-500 p-2 shadow-md rounded-b-lg bg-gradient-to-r from-white to-green-500 rounded">
+   -->
+    <div class="flex" style="justify-content: center; align-items:center; width: 65%; background-color: FEFDED; border-color: rgb(49, 174, 95); border-width: 2px; border-radius: 1px;" >
+     
+      <!--  <h3 class="text-center bg-green-500 p-2 shadow-md rounded-b-lg bg-gradient-to-r from-white to-green-500 rounded">
           Bienvenue Teams Farabi, vous pouvez ajouter un nouveau Admin pour accéder au Dashboard
-        </h3>
-      </div>      
-      <div class="w-full max-w-lg mx-auto mt-32">
-        <form #regitre="ngForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 bg-white-transparent">
-          <!-- Nom -->
-          <div class="mb-4">
-            <label class="block text-green-700 text-sm font-bold mb-2">Nom</label>
-            <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
-            #firstname="ngModel"
-            name="firstname"
-            ngModel
-            type="text"
-            placeholder="Nom"
-            required 
-            />
-            <span class="erreur text-red-500 text-xs italic" *ngIf="firstname.invalid && firstname.touched">Nom invalide</span>
+        </h3> -->
+         
+      <div class="flex" style="justify-content: center; background-color: FEFDED;">
+        
+        <form #regitre="ngForm" style="border-radius: 5px; width: 500px; margin-top: 20px;" >
+          <div><h2 class="block text-black 
+            mb-2" style="margin-bottom: 30px; font-family: 'Roboto', sans-serif; font-size: 26px;">Ajouter un nouveau <strong>Membre</strong></h2>
+        </div>
+          <!-- Nom and Prenom -->
+          <div class="flex gap-4 mb-4">
+            <div class="w-1/2">
+              <label class="block text-green-700 text-sm font-bold mb-2">Nom</label>
+              <input class="shadow appearance-none border border-green-500
+              rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
+              #firstname="ngModel"
+              name="firstname"
+              ngModel
+              type="text"
+              placeholder="Nom"
+              required 
+              />
+              <span class="erreur text-red-500 text-xs italic" *ngIf="firstname.invalid && firstname.touched">Nom invalide</span>
+            </div>
+            <div class="w-1/2">
+              <label class="block text-green-700 text-sm font-bold mb-2">Prénom</label>
+              <input class="shadow appearance-none border border-green-500
+              rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="lastname"
+              ngModel
+              type="text"
+              placeholder="Prénom"
+              #lastname="ngModel"
+              required
+              />
+              <span class="erreur text-red-500 text-xs italic" *ngIf="lastname.invalid && lastname.touched">Prénom invalide</span>
+            </div>
           </div>
-          <!-- Prenom -->
-          <div class="mb-4">
-            <label class="block text-green-700 text-sm font-bold mb-2">Prénom</label>
-            <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
-            name="lastname"
-            ngModel
-            type="text"
-            placeholder="Prenom"
-            #lastname="ngModel"
-            required
-            />
-            <span class="erreur text-red-500 text-xs italic" *ngIf="lastname.invalid && lastname.touched">Prénom invalide</span>
+          <!-- Numéro de téléphone and E-mail -->
+          <div class="flex gap-4 mb-4">
+            <div class="w-1/2">
+              <label class="block text-green-700 text-sm font-bold mb-2">Numéro de téléphone</label>
+              <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="phone"
+              ngModel
+              type="tel"
+              placeholder="exemple 54425000"
+              pattern="[0-9]{8}"
+              #phone="ngModel"
+              required
+              />
+              <span class="erreur text-red-500 text-xs italic" *ngIf="phone.invalid && phone.touched">Numéro invalide</span>
+            </div>
+            <div class="w-1/2">
+              <label class="block text-green-700 text-sm font-bold mb-2">E-mail</label>
+              <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="email"
+              ngModel
+              type="email"
+              placeholder="exemple@fidness.tn"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              #email="ngModel"
+              required
+              />
+              <span class="erreur text-red-500 text-xs italic" *ngIf="email.invalid && email.touched">Email invalide</span>
+            </div>
           </div>
-          <!-- Numero de telephone -->
-          <div class="mb-4">
-            <label class="block text-green-700 text-sm font-bold mb-2">Numero de téléphone</label>
-            <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
-            name="phone"
-            ngModel
-            type="tel"
-            placeholder="exemple 54425000"
-            pattern="[0-9]{8}"
-            #phone="ngModel"
-            required
-            />
-            <span class="erreur text-red-500 text-xs italic" *ngIf="phone.invalid && phone.touched">Numéro invalide</span>
+          <!-- Mot de passe and Retapez le mot de passe -->
+          <div class="flex gap-4 mb-6">
+            <div class="w-1/2">
+              <label class="block text-green-700 text-sm font-bold mb-2">Mot de passe</label>
+              <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="password"
+              type="password"
+              placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+              ngModel
+              #password="ngModel"
+              required
+              />
+              <span class="erreur text-red-500 text-xs italic" *ngIf="password.invalid && password.touched">Mot de passe est invalide</span>
+            </div>
+            <div class="w-1/2">
+              <label class="block text-green-700 text-sm font-bold mb-2">Retapez le mot de passe</label>
+              <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="confirm_password"
+              type="password"
+              placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+              ngModel
+              #confirmPassword="ngModel"
+              required
+              />
+              <span class="erreur text-red-500 text-xs italic" *ngIf="confirmPassword.invalid && confirmPassword.touched">Mot de passe est invalide</span>
+            </div>
+            
           </div>
-          <!-- E-mail -->
-          <div class="mb-4">
-            <label class="block text-green-700 text-sm font-bold mb-2">E-mail</label>
-            <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 leading-tight focus:outline-none focus:shadow-outline"
-            name="email"
-            ngModel
-            type="email"
-            placeholder="exemple@fidness.tn"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            #email="ngModel"
-            required
-            />
-            <span class="erreur text-red-500 text-xs italic" *ngIf="email.invalid && email.touched">Email invalide</span>
-          </div>
-          <!-- Mot de passe -->
-          <div class="mb-6">
-            <label class="block text-green-700 text-sm font-bold mb-2">Mot de passe</label>
-            <input class="shadow appearance-none border border-green-500 rounded w-full py-2 px-3 text-green-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            name="password"
-            type="password"
-            placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
-            ngModel
-            #password="ngModel"
-            required
-          
-            />
-            <span class="erreur text-red-500 text-xs italic" *ngIf="password.invalid && password.touched">Mot de passe est invalide</span>
-            <p class="text-gray-500 text-xs italic">Le mot de passe doit contenir au moins 1 lettre majuscule, 1 chiffre, 1 caractère spécial et 8 caractères de long...</p>
-          </div>
-          <!-- Submit Button -->
+          <p class="text-gray-500 text-xs italic">Le mot de passe doit contenir au moins 1 lettre majuscule, 1 chiffre et 8 caractères de long...</p><br>
           <button class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             [disabled]="regitre.invalid"
             type="button"
             (click)="registerAdmin(regitre)">
-            S'inscrire
+            Ajouter Membre
           </button>
         </form>
       </div>
     </div>
+    <!--
     <footer class="bg-green-500 p-4 shadow-md rounded-t-md mt-auto">
       <div class="flex w-full items-center justify-between px-7 text-[13px] font-medium">
         <div class="text-muted-foreground/50">
@@ -133,5 +148,10 @@
         </ul>
       </div>
     </footer>
+    -->
+    <div class="bg-img-container flex-grow bg-img-container
+    flex flex-col min-h-screen relative" [style.background-image]="'url(' + getImageSource() + ')'">
+
+    </div>
   </div>
-</div>
+

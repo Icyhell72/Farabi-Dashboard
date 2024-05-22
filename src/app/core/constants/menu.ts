@@ -18,7 +18,7 @@ export class Menu {
               route: '/auth',
               children: [
                 { label: 'Ajouter Admin', route: '/admin/add' },
-                { label: 'Ajouter Operateur', route: '/operator/add' },
+                { label: 'Ajouter Operateur', route: '/admin/add' },
                 { label: 'Consulter Operateurs', route: '/dashboard/operators' },
               ],
             },
@@ -29,7 +29,6 @@ export class Menu {
               children: [
                 { label: 'Consulter Clients', route: '/dashboard/welcome' },
                 { label: 'Historique Achat', route: '/dashboard/client' },
-                { label: 'Consulter Operateurs', route: '/dashboard/operators' },
               ],
             },
           ],

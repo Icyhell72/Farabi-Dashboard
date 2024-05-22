@@ -1,0 +1,12 @@
+table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+  tbody tr {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  tbody tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(8, 165, 71, 0.501);
+  }

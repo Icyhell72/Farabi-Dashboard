@@ -1,21 +1,25 @@
-      <br><br><br><br><br>
-      <form #login="ngForm" class="w-3/4 max-w-sm">
+
+    <form #login="ngForm"  style=" width: 500px; height: 300px; margin-bottom: 20px;">
+        <div><h2 class="block text-black 
+            mb-2" style="margin-bottom: 30px; font-family: 'Roboto', sans-serif; font-size: 26px;">Connexion au <strong>Dashboard</strong></h2>
+        </div>
         <div class="mb-4">
-          <label for="email" class="block text-green-700 text-sm font-bold mb-2">Adresse email</label>
+        
+          <label for="email" class="block text-green-600 text-sm font-bold mb-2" >Adresse email</label>
           <input class="shadow appearance-none border border-green-500 
-          rounded w-full py-2 px-3 text-green-700 leading-tight 
+          rounded  py-2 px-3 text-green-600 leading-tight 
           focus:outline-none focus:shadow-outline"
           name="email"
           ngModel
           type="email"
-          placeholder="farabi.fidness@exemple.com"
-          required
+          placeholder="farabi@exemple.com"
+          required 
           />
         </div>
         <div class="mb-6">
-          <label for="password" class="block text-green-700 text-sm font-bold mb-2">Mot de passe</label>
+          <label for="password" class="block text-green-600 text-sm font-bold mb-2">Mot de passe</label>
           <input class="shadow appearance-none border border-green-500
-          rounded w-full py-2 px-3 text-green-700 mb-3 leading-tight 
+          rounded  py-2 px-3 text-green-700 mb-3 leading-tight 
           focus:outline-none focus:shadow-outline"
           name="password"
           type="password"

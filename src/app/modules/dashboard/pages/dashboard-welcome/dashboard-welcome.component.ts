@@ -8,6 +8,7 @@ import { NftHeaderComponent } from '../../components/nft/nft-header/nft-header.c
 @Component({
     selector: 'app-dashboard-welcome',
     templateUrl: './dashboard-welcome.component.html',
+    styleUrl:'./dashboard-welcome.component.scss',
     standalone: true,
     imports: [
         NftHeaderComponent,
